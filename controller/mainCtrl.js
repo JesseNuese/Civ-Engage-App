@@ -5,7 +5,6 @@ angular.module('civapp', [])
 civController.$inject = ['$http'];
 
 function civController($http) {
-
     var civ = this;
     civ.getInfo = function() {
         $http.get('https://www.googleapis.com/civicinfo/v2/representatives?address=4631StarboardDr&key=AIzaSyC9LRRpJaqbHq1_wqecCOeSX0wFIKf14T4')
