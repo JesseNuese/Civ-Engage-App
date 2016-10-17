@@ -6,7 +6,7 @@ Router.$inject=["$routeProvider"];
 function Router($routeProvider) {
   $routeProvider
 
-  .when("/", {templateUrl: "/pages/home.html"})
-  .when("/", {templateUrl: "/pages/pollfinder.html"})
+  .when("/", {templateUrl: "views/home.html"})
+  .when("/", {templateUrl: "views/pollfinder.html"})
   .otherwise({redirectTo: "/"});
 }
