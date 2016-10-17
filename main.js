@@ -7,7 +7,7 @@ angular.module('civapp',[])
 
     var civ = this;
      civ.getInfo = function (){
-       $http.get('https://www.googleapis.com/civicinfo/v2/voterinfo?address=4631StarboardDr&key=insertkeyhere')
+       $http.get('https://www.googleapis.com/civicinfo/v2/voterinfo?address=4631StarboardDr&key=IKH')
        .then(function(res, status){
         civ.myCiv = res.data;
       });
