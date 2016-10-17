@@ -1,3 +1,4 @@
+// Conroller & API
 angular.module('civapp',[])
   .controller('civCtrl', civController);
 
@@ -7,10 +8,19 @@ angular.module('civapp',[])
 
     var civ = this;
      civ.getInfo = function (){
-       $http.get('https://www.googleapis.com/civicinfo/v2/voterinfo?address=4631StarboardDr&key=IKH')
+       $http.get('https://www.googleapis.com/civicinfo/v2/representatives?address=4631StarboardDr&key=AIzaSyC9LRRpJaqbHq1_wqecCOeSX0wFIKf14T4')
        .then(function(res, status){
-        civ.myCiv = res.data;
+        civ.myData = res.data;
+      },
+      function(res, status){
+        console.log('Failure', status);
       });
     }
     civ.getInfo();
   }
+
+// Object with API data
+
+var evs = function(){
+
+}
