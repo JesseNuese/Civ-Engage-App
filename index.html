@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title> Civic Engagement </title>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
     <!-- JQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
     <!-- Bootstrap -->
@@ -17,16 +19,15 @@
     <!--  My JS -->
     <script src="main.js"></script>
     <script src="controller/mainCtrl.js"></script>
+
 </head>
 
 <body ng-controller="civCtrl as civ">
 
     <!-- Navbar -->
+<div class="container">
     <div class="navbar-wrapper">
-        <div class="container">
-
-            <nav class="navbar navbar-inverse navbar-static-top">
-                <div class="container">
+        <nav class="navbar navbar navbar-static-top">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                           <span class="sr-only">Toggle navigation</span>
@@ -34,7 +35,6 @@
                           <span class="icon-bar"></span>
                           <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Vote Today</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
@@ -44,12 +44,16 @@
                     </div>
                 </div>
             </nav>
+</div>
+
+
+
 
             <ng-view>
             </ng-view>
 
-        </div>
-    </div>
+
+
 
 </body>
 

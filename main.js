@@ -1,4 +1,4 @@
-angular.module('civApp', ['ngRoute'])
+angular.module('civApp', ['ngRoute', ])
   .config(Router);
 
 Router.$inject=['$routeProvider'];
@@ -8,5 +8,5 @@ function Router($routeProvider) {
 
   .when('/home', {templateUrl: '/views/home.html'})
   .when('/pollfinder', {templateUrl: '/views/pollfind.html'})
-  .otherwise({redirectTo: '/'});
+  .otherwise({redirectTo: '/home'});
 }
