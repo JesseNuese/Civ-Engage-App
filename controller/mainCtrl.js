@@ -1,5 +1,5 @@
 // Conroller & API
-angular.module('civapp', [])
+angular.module('civApp')
     .controller('civCtrl', civController);
 
 civController.$inject = ['$http'];

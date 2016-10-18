@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="civapp">
+<html ng-app="civApp">
 
 <head>
     <meta charset="utf-8">
@@ -16,6 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
     <!--  My JS -->
     <script src="main.js"></script>
+    <script src="controller/mainCtrl.js"></script>
 </head>
 
 <body ng-controller="civCtrl as civ">
@@ -37,12 +38,15 @@
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="/#home">Home</a></li>
-                            <li><a href="/#pollfinder">Poll Finder</a></li>
+                            <li class="active"><a href="/#/home">Home</a></li>
+                            <li><a href="/#/pollfinder">Poll Finder</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
+
+            <ng-view>
+            </ng-view>
 
         </div>
     </div>
