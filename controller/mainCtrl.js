@@ -6,6 +6,7 @@ civController.$inject = ['$http'];
 
 function civController($http) {
     var civ = this;
+    civ.show = false;
     civ.getInfo = function() {
         $http({
           method: 'GET',
@@ -17,7 +18,8 @@ function civController($http) {
         })
             .then(function(res, status) {
                     civ.myData = res.data;
-                    console.log(civ.myData)
+                    console.log(civ.myData.pollingLocations)
+                    civ.pollArray = civ.myData.pollingLocations;
                 },
                 function(res, status) {
                     console.log('Failure', status);

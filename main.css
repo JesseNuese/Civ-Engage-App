@@ -14,6 +14,22 @@ body {
 
 }
 
+.material-icons.md-48 {
+  font-size: 48px; }
+
+.card {
+  background-color: #9E0000;
+  border-radius: 6px;
+  color: white;
+  padding: 20px;
+  width: 400px;
+  height: 150px;
+  display: grid;
+}
+.input-group {
+  padding-bottom: 40px;
+}
+
 
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
