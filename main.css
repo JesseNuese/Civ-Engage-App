@@ -26,8 +26,18 @@ body {
   float: left;
   margin: 10px;
 }
+.repcard{
+  background-color: #9E0000;
+  border-radius: 6px;
+  color: white;
+  padding: 20px;
+  width: 350px;
+  height: 300px;
+  float: left;
+  margin: 10px;
 
-.card img {
+}
+.repcard img {
 
   width: 20%;
 }
@@ -35,6 +45,10 @@ body {
 
 .input-group {
   padding-bottom: 40px;
+}
+
+.mainpg {
+text-align: center;
 }
 
 

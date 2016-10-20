@@ -13,7 +13,7 @@ function civController($http) {
                 method: 'GET',
                 url: 'https://www.googleapis.com/civicinfo/v2/voterinfo',
                 params: {
-                    key: 'AIKH',
+                    key: 'IKH',
                     address: civ.searchQuery
                 }
             })
@@ -31,7 +31,7 @@ function civController($http) {
                 method: 'GET',
                 url: 'https://www.googleapis.com/civicinfo/v2/representatives',
                 params: {
-                    key: 'AIKH',
+                    key: 'IKH',
                     address: civ.repQuery,
                     levels: 'country'
                 }
