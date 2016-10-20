@@ -14,18 +14,18 @@ body {
 
 }
 
-.material-icons.md-48 {
-  font-size: 48px; }
 
 .card {
   background-color: #9E0000;
   border-radius: 6px;
   color: white;
   padding: 20px;
-  width: 400px;
+  width: 350px;
   height: 150px;
-  display: grid;
-}
+  float: left;
+  margin: 10px;
+
+
 .input-group {
   padding-bottom: 40px;
 }

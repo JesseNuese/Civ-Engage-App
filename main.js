@@ -8,5 +8,6 @@ function Router($routeProvider) {
 
   .when('/home', {templateUrl: '/views/home.html'})
   .when('/pollfinder', {templateUrl: '/views/pollfind.html'})
+  .when('/repfinder', {templateUrl: '/views/repfind.html'})
   .otherwise({redirectTo: '/home'});
 }

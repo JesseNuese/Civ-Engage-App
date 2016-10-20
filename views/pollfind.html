@@ -29,8 +29,10 @@
 
 
 <!-- Result Cards -->
+  <div class="container">
     <div class='card' ng-repeat="poll in civ.pollArray">
       <h4> Name: {{poll.address.locationName}} </h4>
       <h4> City: {{poll.address.city}} </h4>
       <h4> Address: {{poll.address.line1}} </h4>
     </div>
+  </div>

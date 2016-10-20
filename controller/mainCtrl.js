@@ -25,4 +25,21 @@ function civController($http) {
                     console.log('Failure', status);
                 });
     }
-}
+    civ.getReps = function() {
+      $http({
+      method: 'GET',
+      url: 'https://www.googleapis.com/civicinfo/v2/representatives',
+      params: {
+        key:'IKH',
+        address: civ.repQuery
+      }
+      })
+      .then(function(res, status){
+        civ.myReps = res.data;
+        console.log(civ.myReps)
+      },
+      function(res, status) {
+        console.log('Failure', status);
+      })
+    };
+    }
