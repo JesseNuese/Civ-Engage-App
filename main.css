@@ -15,6 +15,7 @@ body {
 }
 
 
+
 .card {
   background-color: #9E0000;
   border-radius: 6px;
@@ -24,6 +25,12 @@ body {
   height: 150px;
   float: left;
   margin: 10px;
+}
+
+.card img {
+
+  width: 20%;
+}
 
 
 .input-group {
