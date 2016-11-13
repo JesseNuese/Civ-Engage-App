@@ -1,13 +1,21 @@
-angular.module('civApp', ['ngRoute', 'ngAnimate'])
-  .config(Router);
+angular.module('civApp', ['ngRoute'])
+    .config(Router);
 
-Router.$inject=['$routeProvider'];
+Router.$inject = ['$routeProvider'];
 
 function Router($routeProvider) {
-  $routeProvider
+    $routeProvider
 
-  .when('/home', {templateUrl: '/views/home.html'})
-  .when('/pollfinder', {templateUrl: '/views/pollfind.html'})
-  .when('/repfinder', {templateUrl: '/views/repfind.html'})
-  .otherwise({redirectTo: '/home'});
+        .when('/home', {
+            templateUrl: '/views/home.html'
+        })
+        .when('/pollfinder', {
+            templateUrl: '/views/pollfind.html'
+        })
+        .when('/repfinder', {
+            templateUrl: '/views/repfind.html'
+        })
+        .otherwise({
+            redirectTo: '/home'
+        });
 }
