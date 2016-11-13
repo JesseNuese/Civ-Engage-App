@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html ng-app="civApp">
+<html ng-app="module.login">
 
 <head>
     <meta charset="utf-8">
     <title> Civility </title>
 
-
 </head>
 
-<body ng-controller="civCtrl as civ">
+<body ng-controller='controller.login as login'>
+    <form id='login' ng-submit='login.submit()'>
+        <input type='text' ng-model='login.email' placeholder='Email' />
+        <input type='password' ng-model='login.password' placeholder='Password' />
+        <button type='submit'>Login</button>
+        <a href='#'>Password</a>
+    </form>
+</body>
 
-    <!-- Navbar -->
-    <nav>
+</html>
+
+<!-- Navbar -->
+<!-- <nav>
         <div class="nav-wrapper">
             <a href='#' class="brand-logo">Logo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -20,23 +28,7 @@
                 <li><a href="/#/repfinder">Representative Finder</a></li>
             </ul>
         </div>
-    </nav>
-
-
-
-
-
-
-
-
-
-
+    </nav> -->
+<!--
     <ng-view>
-    </ng-view>
-
-
-
-
-</body>
-
-</html>
+    </ng-view> -->

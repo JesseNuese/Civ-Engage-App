@@ -4,6 +4,17 @@ var express = require('express'),
     mongoose = require('mongoose'),
     Routes = require('./routes'),
     PORT = process.env.PORT || 3000;
+sessions = require('client-sessions')({
+    cookieName: "civ-session",
+    secret: '',
+    requestKey: 'session',
+    duration: (86400 * 1000) * 7,
+    cookie: {
+        ephemeral: false,
+        httpOnly: true,
+        secure: false
+    }
+});
 
 // mongoose.connect('mongodb://localhost/', (err) => {
 //     if (err) {
