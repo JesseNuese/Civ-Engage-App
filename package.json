@@ -13,10 +13,6 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JesseNuese/Midterm/issues"
-  },
-  "homepage": "https://github.com/JesseNuese/Midterm#readme",
   "dependencies": {
     "bcrypt": "^0.8.7",
     "body-parser": "^1.15.2",
