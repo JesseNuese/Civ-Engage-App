@@ -23,7 +23,7 @@ function civController($http) {
                     civ.pollArray = civ.myData.pollingLocations;
                 },
                 function(res, status) {
-                    console.log('Failure', status);
+                    console.log('Error', error);
                 });
     }
     civ.getReps = function() {

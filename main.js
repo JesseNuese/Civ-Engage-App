@@ -1,4 +1,4 @@
-angular.module('civApp', ['ngRoute'])
+angular.module('civApp', ['ngRoute', 'ngAnimate'])
   .config(Router);
 
 Router.$inject=['$routeProvider'];
