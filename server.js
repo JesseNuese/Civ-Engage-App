@@ -3,18 +3,19 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     Routes = require('./routes'),
-    PORT = process.env.PORT || 3000;
-sessions = require('client-sessions')({
-    cookieName: "civ-session",
-    secret: 'dr@gons',
-    requestKey: 'session',
-    duration: (86400 * 1000) * 7,
-    cookie: {
-        ephemeral: false,
-        httpOnly: true,
-        secure: false
-    }
-});
+    sessions = require('client-sessions')({
+        cookieName: "civ-session",
+        secret: 'dr@gons',
+        requestKey: 'session',
+        duration: (86400 * 1000) * 7,
+        cookie: {
+            ephemeral: false,
+            httpOnly: true,
+            secure: false
+        }
+    });
+
+PORT = process.env.PORT || 3000;
 
 mongoose.connect('mongodb://localhost/users', (err) => {
     if (err) {
