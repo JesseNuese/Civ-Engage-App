@@ -6,7 +6,7 @@ var express = require('express'),
     PORT = process.env.PORT || 3000;
 sessions = require('client-sessions')({
     cookieName: "civ-session",
-    secret: '',
+    secret: 'dr@gons',
     requestKey: 'session',
     duration: (86400 * 1000) * 7,
     cookie: {
@@ -16,13 +16,13 @@ sessions = require('client-sessions')({
     }
 });
 
-// mongoose.connect('mongodb://localhost/', (err) => {
-//     if (err) {
-//         console.log('Error: ', err);
-//     } else {
-//         console.log('Successfully connected to database!');
-//     }
-// });
+mongoose.connect('mongodb://localhost/users', (err) => {
+    if (err) {
+        console.log('Error: ', err);
+    } else {
+        console.log('Successfully connected to database!');
+    }
+});
 
 var app = express();
 

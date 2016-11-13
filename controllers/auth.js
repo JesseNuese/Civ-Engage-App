@@ -9,7 +9,7 @@ module.exports = {
             email: req.body.email
         }, (err, user) => {
             if (err) {
-                console.error('MongoDB error :'
+                console.error('MongoDB error :',
                     err);
                 res.status(500).json(err);
             }
