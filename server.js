@@ -5,7 +5,13 @@ var express = require('express'),
     Routes = require('./routes');
 
 
-// mongoose.connect('');
+mongoose.connect('mongodb://localhost/', (err) => {
+    if (err) {
+        console.log('Error: ', err);
+    } else {
+        console.log('Successfully connected to database!');
+    }
+});
 
 var app = express();
 
