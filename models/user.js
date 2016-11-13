@@ -1,8 +1,8 @@
 var mongoose = require('mongoose'),
-    bcrypt = require('bcrypt.js'),
+    bcrypt = require('bcryptjs'),
     SALT_INDEX = 10,
 
-    UserSchema = new.mongoose.Schema({
+    UserSchema = new mongoose.Schema({
         username: {
             type: String,
             unique: true,
@@ -23,7 +23,7 @@ UserSchema.pre('save', function(next) {
     var user = this;
 
     if (!user.isModified('password')) {
-        returns next();
+        return next();
     }
     // generate a salt value
 

@@ -1,15 +1,15 @@
-var User = require('..models/user'),
-    bcrypt = require('bcrypt.js');
+var User = require('../models/user'),
+    bcrypt = require('bcryptjs');
 
 module.exports = {
     login: (req, res) => { //POST login
-        console.info('LOGIN::POST::', req.body);
+        console.info('LOGIN::POST::PAYLOAD::', req.body);
 
         User.findOne({
             email: req.body.email
         }, (err, user) => {
             if (err) {
-                console.error('MongoDB error :',
+                console.error('MongoDB error: ',
                     err);
                 res.status(500).json(err);
             }
