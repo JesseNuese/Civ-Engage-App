@@ -2,16 +2,16 @@ var express = require('express'),
     morgan = require('morgan'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    Routes = require('./routes');
+    Routes = require('./routes'),
+    PORT = process.env.PORT || 3000;
 
-
-mongoose.connect('mongodb://localhost/', (err) => {
-    if (err) {
-        console.log('Error: ', err);
-    } else {
-        console.log('Successfully connected to database!');
-    }
-});
+// mongoose.connect('mongodb://localhost/', (err) => {
+//     if (err) {
+//         console.log('Error: ', err);
+//     } else {
+//         console.log('Successfully connected to database!');
+//     }
+// });
 
 var app = express();
 
@@ -25,6 +25,6 @@ app.use(bodyParser.urlencoded({
 // Routes
 Routes(app);
 
-app.listen(3000, () => {
-    console.log('Server is running!')
+app.listen(PORT, () => {
+    console.log('Server is running on PORT:', PORT);
 });
