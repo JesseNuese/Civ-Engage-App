@@ -23,7 +23,7 @@ module.exports = {
 
                 bcrypt.compare(req.body.password, user.password, (compareErr, matched) => {
                     if (compareErr) {
-                        console.lerror('compareErr error:', compareErr);
+                        console.error('compareErr error:', compareErr);
                         res.status(500).json(err);
                     } else if (!matched) {
                         console.warn('Password mismatch!');
@@ -65,7 +65,7 @@ module.exports = {
             if (req.session.userId) {
                 next();
             } else {
-                res.redirect('login.html');
+                res.redirect('/login.html');
             }
         }
     }
