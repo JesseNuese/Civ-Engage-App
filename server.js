@@ -17,7 +17,7 @@ var express = require('express'),
 
 PORT = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://localhost/users', (err) => {
+mongoose.connect('mongodb://localhost/civility', (err) => {
     if (err) {
         console.log('Error: ', err);
     } else {
@@ -33,6 +33,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({
     extended: true
 }), bodyParser.json());
+app.use(sessions);
 
 // Routes
 Routes(app);
