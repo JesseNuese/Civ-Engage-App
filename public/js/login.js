@@ -1,4 +1,4 @@
-angular.module('login', [])
+civility('login', [])
     .controller('controller.login', ['http', function($http) {
         var login = this;
 

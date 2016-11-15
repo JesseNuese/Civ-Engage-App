@@ -1,4 +1,4 @@
-angular.module('civApp', ['ngRoute'])
+var civility = angular.module('civApp', ['ngRoute'])
     .config(Router);
 
 Router.$inject = ['$routeProvider'];

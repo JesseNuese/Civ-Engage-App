@@ -39,16 +39,18 @@
 
 
     <!-- Login Form -->
-    <div class="center-align container wrapper">
+    <div class="center-align container">
         <form id='login' ng-submit='login.submit()'>
             <p class="title">Log in</p>
             <input type='text' ng-model='login.email' placeholder='Email' />
             <input type='password' ng-model='login.password' placeholder='Password' />
-            <a href='#'>Forgot your password?</a>
             <br>
-            <button type='submit'>Login</button>
-
+            <br>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Login
+              <i class="material-icons right">send</i>
+            </button>
         </form>
+        <a href='#'>Don't have an account?</a>
     </div>
 </body>
 
