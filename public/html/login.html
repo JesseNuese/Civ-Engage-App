@@ -16,8 +16,9 @@
     <script src="/js/module.login.js"></script>
     <script src="/js/controller.home.js"></script>
 
-    <!-- Popeye -->
-    <script src="path/to/angular-popeye/release/popeye.js"></script>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../styles/main.css">
+
 </head>
 
 <body ng-controller='controller.login as login'>
@@ -34,13 +35,21 @@
         </div>
     </nav>
 
+    <!-- Parralax -->
+    <div class="parallax-container">
+        <div class="parallax"><img src="../assets/bigcity.jpeg"></div>
+    </div>
+
+
     <!-- Login Form -->
-    <form id='login' ng-submit='login.submit()'>
-        <input type='text' ng-model='login.email' placeholder='Email' />
-        <input type='password' ng-model='login.password' placeholder='Password' />
-        <button type='submit'>Login</button>
-        <a href='#'>Password</a>
-    </form>
+    <div class="center-align container">
+        <form id='login' ng-submit='login.submit()'>
+            <input type='text' ng-model='login.email' placeholder='Email' />
+            <input type='password' ng-model='login.password' placeholder='Password' />
+            <button type='submit'>Login</button>
+            <a href='#'>Password</a>
+        </form>
+    </div>
 </body>
 
 </html>
