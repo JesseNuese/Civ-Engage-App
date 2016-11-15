@@ -35,19 +35,19 @@
         </div>
     </nav>
 
-    <!-- Parralax -->
-    <div class="parallax-container">
-        <div class="parallax"><img src="../assets/bigcity.jpeg"></div>
-    </div>
+
 
 
     <!-- Login Form -->
-    <div class="center-align container">
+    <div class="center-align container wrapper">
         <form id='login' ng-submit='login.submit()'>
+            <p class="title">Log in</p>
             <input type='text' ng-model='login.email' placeholder='Email' />
             <input type='password' ng-model='login.password' placeholder='Password' />
+            <a href='#'>Forgot your password?</a>
+            <br>
             <button type='submit'>Login</button>
-            <a href='#'>Password</a>
+
         </form>
     </div>
 </body>

@@ -1,3 +1,21 @@
-background {
-  
+html {
+  background: url(assets/bluecityscape.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+.wrapper {
+
+}
+
+.login {
+
+  border-radius: 2px 2px 5px 5px;
+  padding: 10px 20px 20px 20px;
+  width: 90%;
+  max-width: 320px;
+  background: #ffffff;
+  position: relative;
+  padding-bottom: 80px;
 }
