@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app='CivApp'>
+
+<head>
+    <meta charset="utf-8">
+    <title>Register</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+</head>
+
+<body ng-controller="civController as civ">
+    <h1> {{civ.greeting}} </h1>
+
+    <form ng-submit="">
+        <input class="form-control" ng-model="civ.newUser.username" placeholder="Username">
+        <input class="form-control" ng-model="civ.newUser.email" placeholder="Email">
+        <input class="form-control" ng-model="civ.newUser.firstname" placeholder="First Name">
+        <input class="form-control" ng-model="civ.newUser.lastname" placeholder="Last Name">
+        <input class="form-control" ng-model="civ.newUser.birthdate" placeholder="DOB in mm-dd-yy format" ng-list>
+        <input class="form-control" ng-model="home.newUser.password" placeholder="Create Password" ng-list>
+        <input type="submit">
+    </form>
+</body>
+
+</html>

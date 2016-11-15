@@ -6,6 +6,7 @@ civController.$inject = ['$http'];
 
 function civController($http) {
     var civ = this;
+    civ.greeting = "Welcome";
     civ.show = false;
     civ.officeOfficals = [];
     civ.getInfo = function() {
@@ -41,13 +42,13 @@ function civController($http) {
                     console.log(civ.myReps)
                     civ.repArray = civ.myReps;
 
-                    civ.myReps.offices.forEach(function(office, index){
-                      civ.officeOfficals.push({
-                        officeName: office.name,
-                        officialName: civ.myReps.officials[index].name,
-                        officialParty: civ.myReps.officials[index].party,
-                        officialPhoto: civ.myReps.officials[index].photoUrl
-                      });
+                    civ.myReps.offices.forEach(function(office, index) {
+                        civ.officeOfficals.push({
+                            officeName: office.name,
+                            officialName: civ.myReps.officials[index].name,
+                            officialParty: civ.myReps.officials[index].party,
+                            officialPhoto: civ.myReps.officials[index].photoUrl
+                        });
                     })
                 },
                 function(res, status) {
