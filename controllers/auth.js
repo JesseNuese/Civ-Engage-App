@@ -66,7 +66,7 @@ module.exports = {
                 next();
             } else {
                 res.redirect('/html/login.html');
-                console.log("Test #1")
+                console.log("Redirect Working");
             }
         }
     }
