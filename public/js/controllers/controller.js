@@ -1,9 +1,10 @@
 // Conroller & API
-civility.controller('civCtrl', civController);
+angular.module('civApp', [])
+  .controller('civCtrl', civController);
 
-civController.$inject = ['$http'];
+civController.$inject = ['$http', 'userFactory'];
 
-function civController($http) {
+function civController($http, userFactory) {
     var civ = this;
     civ.greeting = "Welcome";
     civ.show = false;
@@ -53,5 +54,12 @@ function civController($http) {
                 function(res, status) {
                     console.log('Failure', status);
                 })
+    };
+    civ.createUser = function() {
+      userFactory.createUser(civ.userData)
+        .then(function(returnData){
+          console.log('Return Data', returnData);
+          civ.userData = {};
+        })
     };
 }

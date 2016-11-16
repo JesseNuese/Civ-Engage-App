@@ -12,6 +12,8 @@ var mongoose = require('mongoose'),
             unique: true,
         },
         name: String,
+        birthdate: String,
+        sex: Boolean,
         password: String,
         created: {
             type: Number,

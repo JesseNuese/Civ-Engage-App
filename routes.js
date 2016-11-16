@@ -1,5 +1,4 @@
-var Civic = require('./controllers/civics'),
-    Auth = require('./controllers/auth'),
+var Auth = require('./controllers/auth'),
     express = require('express');
 
 module.exports = (app) => {
