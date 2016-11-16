@@ -60,6 +60,7 @@ function civController($http, userFactory) {
         .then(function(returnData){
           console.log('Return Data', returnData);
           civ.userData = {};
+          location.href="/views/login.html";
         })
     };
 }

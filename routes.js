@@ -11,7 +11,7 @@ module.exports = (app) => {
         })
     });
 
-    app.use('/api*', Auth.middlewares.session);
+    app.all('/api*', Auth.middlewares.session);
 
     app.get('/logout', Auth.logout);
     app.post('/login', Auth.login);
