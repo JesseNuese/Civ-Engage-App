@@ -12,7 +12,7 @@ var mongoose = require('mongoose'),
             unique: true,
         },
         name: String,
-        birthdate: String,
+        age: Number,
         sex: Boolean,
         password: String,
         created: {
