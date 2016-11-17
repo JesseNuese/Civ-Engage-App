@@ -1,6 +1,6 @@
 // Conroller & API
-angular.module('civApp', [])
-  .controller('civCtrl', civController);
+angular.module('civApp')
+  .controller('civController', civController);
 
 civController.$inject = ['$http', 'userFactory'];
 
@@ -22,11 +22,12 @@ function civController($http, userFactory) {
                     civ.myData = res.data;
                     console.log(civ.myData)
                     civ.pollArray = civ.myData.pollingLocations;
+                    // civ.pollArray.address.state
                 },
                 function(res, status) {
                     console.log('Error', error);
                 });
-    }
+    },
     civ.getReps = function() {
         $http({
                 method: 'GET',
@@ -50,11 +51,30 @@ function civController($http, userFactory) {
                             officialPhoto: civ.myReps.officials[index].photoUrl
                         });
                     })
-                },
-                function(res, status) {
-                    console.log('Failure', status);
+                    $http({
+                            method: 'GET',
+                            url: 'http://www.opensecrets.org/api/?',
+                            params: {
+                                method:'getLegislators',
+                                apikey:'c71586955acdfdc1ddedbbaf0711fb60',
+                                value: civ.userState,
+                                output: 'json'
+                            }
                 })
-    };
+                .then(function(res, status) {
+                  civ.legislator = res.data;
+                  console.log(civ.legislator);
+                },
+              function(res, status) {
+                console.log('Failure', status);
+              })
+
+
+    },
+    function(res, status) {
+        console.log('Failure', status);
+    })
+
     civ.createUser = function() {
       userFactory.createUser(civ.userData)
         .then(function(returnData){
@@ -63,4 +83,5 @@ function civController($http, userFactory) {
           location.href="/views/login.html";
         })
     };
-}
+  };
+};

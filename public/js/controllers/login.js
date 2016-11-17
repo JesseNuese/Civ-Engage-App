@@ -1,5 +1,9 @@
-angular.module('login', [])
-    .controller('controller.login', ['http', function($http) {
+angular.module('civApp')
+    .controller('controller.login', controllerLogin)
+
+        controllerLogin.$inject = ['$http'];
+
+        function controllerLogin($http) {
         var login = this;
 
         login.submit = function() {
@@ -19,4 +23,4 @@ angular.module('login', [])
                 console.error(err);
             });
         }
-    }]);
+    };
