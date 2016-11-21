@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <title> Civility </title>
 
+    <!-- Compiled and minified Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
     <!-- Angular -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
@@ -32,20 +35,49 @@
 
 <body>
     <nav>
-        <div class="nav-wrapper #1976d2 white">
+        <div class="nav-wrapper #b0bec5 blue-grey lighten-3">
             <img src="assets/flag.svg">
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <ul id="nav-mobile" class="right hide-on-lg-and-down">
                 <li><a href="#">Poll Finder</a></li>
                 <li><a href="#">Rep Finder</a></li>
                 <li><a href="#">Open Secrets</a></li>
             </ul>
         </div>
     </nav>
+    <br>
+    <br>
+    <div class="row">
+        <div class="block container z-depth-4 #cfd8dc blue-grey lighten-4">
+            <div class="container">
+                <h2 class="header">Civility</h2>
+                <p class="grey-text text-darken-3 lighten-3">Civility is an app built to make participating in the democratic process as easy as possible by providing you with pertinent information about your elected officials.</p>
+                <br>
+            </div>
+        </div>
+    </div>
 
-
+    <!-- Login Form -->
+    <div class="center-align container z-depth-4 white">
+        <form id='login' ng-submit='login.submit()'>
+            <h2 class="title">Log In</h2>
+            <input type='text' ng-model='login.email' placeholder='Email' />
+            <input type='password' ng-model='login.password' placeholder='Password' />
+            <br>
+            <br>
+            <button class="input-group-btn btn waves-effect waves-light" type="submit" name="action">Login
+                  <i class="material-icons right">send</i>
+                </button>
+        </form>
+        <a href='register.html'>Don't have an account?</a>
+    </div>
 
     <ng-view>
     </ng-view>
+
+    <br>
+    <br>
+    <br>
+    <br>
 
 
     <footer class="page-footer #263238 blue-grey darken-4">

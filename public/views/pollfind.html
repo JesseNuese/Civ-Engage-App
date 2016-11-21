@@ -1,20 +1,21 @@
 <!-- Search function  -->
-<div class="container">
-    <section id="search">
+
+<section id="search">
+    <div class="container z-depth-4 #cfd8dc blue-grey lighten-4">
         <p class="lead">
             Use the search box below to enter your address and find out where you need to go to vote!
         </p>
 
         <div class="input-group">
             <input type="text" class="form-control" ng-model="civ.searchQuery" placeholder="Enter your address" name="srch-term" id="srch-term">
-            <div class="input-group-btn">
-                <button class="btn btn-default btn-primary" type="submit" ng-click="civ.getInfo()">
-          <i class="glyphicon glyphicon-search"></i>
-          </button>
+            <div class="center-align input-group-btn">
+                <button class="btn waves-effect waves-ligh #607d8b blue-grey" type="submit" name="action" ng-click="civ.getInfo()">Submit
+                  <i class="material-icons right">send</i>
+                </button>
             </div>
         </div>
-    </section>
-</div> -->
+    </div>
+</section>
 
 
 <!-- Result Cards -->

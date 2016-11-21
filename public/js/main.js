@@ -6,8 +6,8 @@ Router.$inject = ['$routeProvider'];
 function Router($routeProvider) {
     $routeProvider
         .when('/', {
-          templateUrl: '../views/land.html',
-          controller: 'civController as civ'
+            templateUrl: '../views/land.html',
+            controller: 'civController as civ'
         })
         .when('/home', {
             templateUrl: '../views/home.html',
@@ -22,10 +22,10 @@ function Router($routeProvider) {
             controller: 'civController as civ'
         })
         .when('/login', {
-          templateUrl: '../views/login.html',
-          controller: 'controller.login as login'
+            templateUrl: '../views/login.html',
+            controller: 'controller.login as login'
         })
         .otherwise({
             redirectTo: '/home'
         });
-}
+};

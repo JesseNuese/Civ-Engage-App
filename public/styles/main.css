@@ -1,18 +1,35 @@
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
 
-  main {
-    flex: 1 0 auto;
-  }
-
-
-  html {
+html {
 
     background: url(../assets/greycity.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+main {
+    flex: 1 0 auto;
+  }
+.address {
+  background-color: #eceff1;
+  border-radius: 6px;
+}
+.input-group-btn {
+  padding-bottom: 10px;
+}
+.input-group {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.lead {
+  padding-top: 20px;
+  text-align: center;
+
+}
+.search {
+  border-radius: 50px;
 }
