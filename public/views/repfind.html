@@ -1,25 +1,27 @@
-
 <!-- Search function -->
-<div class="container">
-    <section id="search">
+
+<section id="search">
+    <div class="container z-depth-4 #cfd8dc blue-grey lighten-4">
         <p class="lead">
             Use the search box below to enter your address and find out who represents you in Congress!
         </p>
 
         <div class="input-group">
             <input type="text" class="form-control" ng-model="civ.repQuery" placeholder="Enter your address" name="srch-term" id="srch-term">
-            <div class="input-group-btn">
-                <button class="btn btn-default btn-primary" type="submit" ng-click="civ.getReps()">
-                  <i class="glyphicon glyphicon-search"></i>
-                </button>
-            <select ng-model='civ.userState'>
+            <div class="center-align input-group-btn">
+                <button class="btn waves-effect waves-ligh #607d8b blue-grey" type="submit" name="action" ng-click="civ.getReps()">Submit
+                <i class="material-icons right">send</i>
+              </button>
+
+
+                <select ng-model='civ.userState'>
               <option value='WI'> WI </option>
             </select>
 
             </div>
         </div>
-    </section>
-</div>
+    </div>
+</section>
 
 
 
