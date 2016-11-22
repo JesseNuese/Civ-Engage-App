@@ -16,7 +16,7 @@ main {
   }
 .address {
   background-color: #eceff1;
-  border-radius: 6px;
+  border-radius: 3px;
 }
 .input-group-btn {
   padding-bottom: 10px;
@@ -26,10 +26,10 @@ main {
   padding-right: 20px;
 }
 .lead {
-  padding-top: 20px;
+  padding-top: 2px;
   text-align: center;
 
 }
 .block {
-  border-radius: 5px;
+  border-radius: 3px;
 }
