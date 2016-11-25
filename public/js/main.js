@@ -29,7 +29,12 @@ function Router($routeProvider) {
             templateUrl: '../views/register.html',
             controller: 'civController as civ'
         })
-        .otherwise({
-            redirectTo: '/home'
-        });
+        .when('/opensecrets', {
+            templateUrl: '../views/opensecrets.html',
+            controller: 'civController as civ'
+        })
+
+    .otherwise({
+        redirectTo: '/home'
+    });
 };
