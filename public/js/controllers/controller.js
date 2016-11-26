@@ -49,12 +49,12 @@ function civController($http, userFactory) {
                 civ.repArray = civ.myReps;
                 civ.myReps.legislator.forEach(function (legislator, index) {
                     civ.officeOfficals.push({
-                        officeName: legislator.name,
+                        officeName: civ.myReps.legislator[index]['attributes'].office,
                         officialName: civ.myReps.legislator[index]['@attributes'].firstlast,
                         // officialParty: civ.myReps.legislator[index].party,
                         // officialPhoto: civ.myReps.legislator[index].photoUrl
                     });
-                    console.log(civ.officeOfficals);
+                    // console.log(civ.officeOfficals);
                 })
             },
             function(res, status) {
