@@ -9,7 +9,6 @@ function civController($http, userFactory) {
     civ.greeting = "Welcome";
     civ.show = false;
     civ.officeOfficals = [];
-    civ.repArray = [];
     // Google Poll Locations
     civ.getInfo = function() {
         $http({
@@ -45,16 +44,17 @@ function civController($http, userFactory) {
         })
 
         .then(function(res, status) {
-                civ.myReps = res.data;
-                console.log(civ.myReps);
+                civ.myReps = res.data.response;
+                console.log(civ.myReps.legislator);
                 civ.repArray = civ.myReps;
-                civ.myReps.offices.forEach(function(office, index) {
+                civ.myReps.legislator.forEach(function (legislator, index) {
                     civ.officeOfficals.push({
-                        officeName: office.name,
-                        officialName: civ.myReps.officials[index].name,
-                        officialParty: civ.myReps.officials[index].party,
-                        officialPhoto: civ.myReps.officials[index].photoUrl
+                        officeName: legislator.name,
+                        officialName: civ.myReps.legislator[index]['@attributes'].firstlast,
+                        // officialParty: civ.myReps.legislator[index].party,
+                        // officialPhoto: civ.myReps.legislator[index].photoUrl
                     });
+                    console.log(civ.officeOfficals);
                 })
             },
             function(res, status) {
