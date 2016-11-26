@@ -33,3 +33,6 @@ main {
 .block {
   border-radius: 3px;
 }
+.card {
+  padding: 10px;
+}
