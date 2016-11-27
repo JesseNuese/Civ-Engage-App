@@ -21,15 +21,19 @@
 
 <!-- Result Cards  -->
 <div class="row" ng-repeat="rep in civ.officeOfficals">
-    <div class="col s12">
+    <div class="col s6">
         <div class='card blue-grey darken-1'>
             <div class='card-content text'>
                 <span class="card-title ">{{rep.officialName}}</span>
-                <p> info info info </p>
-                <!-- <img src='{{rep.officialPhoto}}'></img>
-                    <h4>{{rep.officeName}}</h4>
-                    <h4>{{rep.officialName}}</h4>
-                    <h4>{{rep.officialParty}}</h4> -->
+                <p>Party: {{rep.officialParty}}</p>
+                <p>First elected: {{rep.officalYear}}</p>
+                <p>Phone: {{rep.officialPhone}}</p>
+                <p>
+                    <a href="{{rep.officialEmail}}"> Email {{rep.officialName}}</a>
+                </p>
+                <p>
+                    <a href="https://twitter.com/{{rep.officialTwitter}}"> Follow {{rep.officialName}} on Twitter</a>
+                </p>
             </div>
         </div>
     </div>
