@@ -1,16 +1,16 @@
-<div class="address container">
+<div class="center-align container z-depth-4 white">
+    <h1 class="center-align"> Register </h1>
     <form class="container" ng-submit="civ.createUser()">
         <input class="form-control" ng-model="civ.userData.username" placeholder="Username">
         <input class="form-control" ng-model="civ.userData.email" placeholder="Email">
         <input class="form-control" ng-model="civ.userData.name" placeholder="Name">
         <input class="form-control" ng-model="civ.userData.age" placeholder="Age">
-        <select ng-model="civ.userData.sex">
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
+        <input class="form-control" ng-model="civ.userData.sex" placeholder="Gender">
         <input class="form-control" ng-model="civ.userData.password" placeholder="Create Password" ng-list>
-        <button class="input-group-btn btn waves-effect waves-light z-depth-4 #607d8b blue-grey" type="submit" name="action">Register
+        <button class="center-align input-group-btn btn waves-effect waves-light z-depth-4 #607d8b blue-grey" type="submit" name="action">Register
               <i class="material-icons right">send</i>
-            </button>
+        </button>
+        <br>
+        <br>
     </form>
 </div>
