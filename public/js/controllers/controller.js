@@ -16,7 +16,7 @@ function civController($http, userFactory) {
                 method: 'GET',
                 url: 'https://www.googleapis.com/civicinfo/v2/voterinfo',
                 params: {
-                    key: 'AIzaSyC9LRRpJaqbHq1_wqecCOeSX0wFIKf14T4',
+                    key: '',
                     address: civ.searchQuery
                 }
             })
@@ -37,7 +37,7 @@ function civController($http, userFactory) {
             url: 'http://www.opensecrets.org/api/?',
             params: {
                 method: 'getLegislators',
-                apikey: 'c71586955acdfdc1ddedbbaf0711fb60',
+                apikey: '',
                 id: civ.repQuery,
                 output: 'json'
             }
