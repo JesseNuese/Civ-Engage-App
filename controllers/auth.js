@@ -42,11 +42,11 @@ module.exports = {
     },
     logout: (req, res) => {
         req.session.reset();
-        res.redirect('/views/login.html');
+        res.redirect('#login');
     },
     register: (req, res) => {
         req.session.reset();
-        res.redirect('/views/login.html');
+        res.redirect('#login');
     },
     register: (req, res) => {
         console.log(req.body);
@@ -65,7 +65,7 @@ module.exports = {
             if (req.session.userId) {
                 next();
             } else {
-                res.redirect('/views/login.html');
+                res.redirect('#login');
                 console.log("Redirect Working");
             }
         }
